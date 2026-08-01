@@ -1,0 +1,51 @@
+# Spyne Documentation Documentation
+
+> Documentation for Spyne Documentation
+
+## Guides
+- [Overview](https://docs.spyne.ai/docs/overview-3.md)
+- [Authentication](https://docs.spyne.ai/docs/authentication.md)
+- [Prerequisites](https://docs.spyne.ai/docs/prerequisites.md)
+- [Transform your first Vehicle](https://docs.spyne.ai/docs/transform-your-first-vehicle-1.md): Send us vehicle images and/or video, and Spyne will return transformed outputs.
+- [Retrieve Transformed Vehicle](https://docs.spyne.ai/docs/retrive-transformed-vehicle.md)
+- [Webhook](https://docs.spyne.ai/docs/webhook-1.md)
+- [Explaining API and Webhook Response](https://docs.spyne.ai/docs/explaining-api-and-webhook-response.md)
+- [Spyne Automobile SDK](https://docs.spyne.ai/docs/v2-sdk.md)
+- [Android](https://docs.spyne.ai/docs/v2-android-sdk.md)
+- [Steps to Integrate](https://docs.spyne.ai/docs/android-sdk.md)
+- [Initiate a Shoot](https://docs.spyne.ai/docs/initialization-setup.md)
+- [Callbacks: Tracking the Shoot Lifecycle](https://docs.spyne.ai/docs/callbacks-tracking-the-shoot-lifecycle.md)
+- [Resume a Shoot](https://docs.spyne.ai/docs/resume-a-shoot.md)
+- [Upload Handling: Tracking and Managing Uploads](https://docs.spyne.ai/docs/upload-handling-tracking-and-managing-uploads.md)
+- [iOS](https://docs.spyne.ai/docs/v2-ios-sdk.md)
+- [Steps to Integrate](https://docs.spyne.ai/docs/steps-to-integrate.md): Follow these steps to add and initialize the SpyneAutomobile SDK in your iOS application.
+- [Initiate a shoot](https://docs.spyne.ai/docs/initiate-a-shoot.md)
+- [Callbacks: Tracking the Shoot Lifecycle](https://docs.spyne.ai/docs/callbacks-tracking-the-shoot-lifecycle-copy.md)
+- [Resume a Shoot](https://docs.spyne.ai/docs/resume-a-shoot-copy.md)
+- [Upload Handling: Tracking and Managing Uploads](https://docs.spyne.ai/docs/upload-handling-tracking-and-managing-uploads-copy.md)
+- [Customize shooting flow](https://docs.spyne.ai/docs/customize-shooting-flow.md)
+- [Language Codes](https://docs.spyne.ai/docs/language-codes.md)
+- [Setup shooting preferences](https://docs.spyne.ai/docs/setup-your-shooting-preferences.md)
+- [Shoot your first vehicle](https://docs.spyne.ai/docs/shoot-your-first-vehicle.md)
+- [Managing Your Inventory in Spyne](https://docs.spyne.ai/docs/view-inventory-and-download-your-vehicles-media.md)
+- [How to Add, Remove, or Reshoot Media for a Vehicle](https://docs.spyne.ai/docs/how-to-addremove-media-or-reshoot-a-vehicle.md)
+- [iOS SDK React<>Swift Bridge](https://docs.spyne.ai/docs/ios-sdk-reactswift-bridge.md)
+- [Android SDK Quick Start Guide](https://docs.spyne.ai/docs/android-sdk-quick-start-guide-2.md)
+- [Initiating Images and 360 Shoot](https://docs.spyne.ai/docs/initiating-basic-shoot-1.md)
+- [Initiating Draft & Reshoot (Image/Catalog Flow)](https://docs.spyne.ai/docs/initiating-draft-reshoot-360-view-1.md)
+- [Advanced SDK Configuration](https://docs.spyne.ai/docs/advanced-sdk-configuration-1.md)
+- [File Transfer Protocol (FTP)](https://docs.spyne.ai/docs/ftp.md)
+
+## API Reference
+- [Merchandise Process](https://docs.spyne.ai/reference/merchandise-process.md)
+- [Retrieve Media](https://docs.spyne.ai/reference/get-media.md)
+- [Classify Images](https://docs.spyne.ai/reference/autoclassification.md): This API can be used to classify and validate the car images on certain parameters
+- [Transform Images](https://docs.spyne.ai/reference/autotransformation.md): This page will help you get started with our replace background API for the Automobile category
+- [Webhook Push Service](https://docs.spyne.ai/reference/webhook.md)
+- [GET Images](https://docs.spyne.ai/reference/getreadyimages.md): This API is used to obtain all the images which are ready after processing by Spyne
+- [Video Validation](https://docs.spyne.ai/reference/post_360-v1-validate-video-1.md): Accepts a video, checks the video on multiple parameters like Cropping, Angle, Car Present & returns the response accordingly!
+- [Webhook Service - 360](https://docs.spyne.ai/reference/webhook-push-service-copy.md)
+- [3D 360-Spin](https://docs.spyne.ai/reference/post_360-v1-3d-1.md): Accepts a publicly accessible complete-round video of vehicle and returns the smoothest ever Studio 360-spin you will ever see! Takes an hour to process but it's worth the wait. Recommended for unstable video inputs.
+- [Response 360-Spin](https://docs.spyne.ai/reference/get_response.md): Fetch a response for 360 spin images or related data by either SKU name or SKU ID. Only one of them should be provided.
+- [Video Generation](https://docs.spyne.ai/reference/video-generation.md)
+- [Response Videos](https://docs.spyne.ai/reference/response-videos.md)

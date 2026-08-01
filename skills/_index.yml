@@ -1,0 +1,18 @@
+generated: '2026-07-21'
+method: generated
+source: >-
+  Generated from the documented Spyne Unified API operations (docs.spyne.ai);
+  grounded in real HTTP endpoints, not a machine-readable OpenAPI spec.
+skills:
+- file: spyne-transform-vehicle.md
+  name: Transform a vehicle into studio-grade media
+  api: Spyne Unified API
+  operations:
+  - POST /api/pv1/merchandise/process/
+  - GET get-media / getreadyimages
+  - webhook sku.done
+- file: spyne-classify-images.md
+  name: Classify and QC vehicle images
+  api: Spyne Unified API
+  operations:
+  - POST /auto/classify/v1/image

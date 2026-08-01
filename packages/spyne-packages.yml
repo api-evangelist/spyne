@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.spyne.ai/docs/v2-sdk
+notes: >-
+  Spyne ships first-party mobile SDKs (the "SpyneAutomobile" SDK) for on-device
+  guided vehicle shoots that feed the Unified API. No public server-side client
+  library was found on npm, PyPI, Maven Central, NuGet, pkg.go.dev, RubyGems,
+  Packagist, or crates.io during this pass; server-side integration is direct
+  HTTP against api.spyne.ai. Registries/coordinates for the mobile SDKs are
+  distributed via the docs onboarding rather than a public registry listing.
+packages:
+- language: kotlin
+  platform: android
+  registry: docs
+  name: SpyneAutomobile (Android SDK)
+  url: https://docs.spyne.ai/docs/v2-android-sdk
+  install: See Android integration guide (https://docs.spyne.ai/docs/android-sdk)
+  official: true
+- language: swift
+  platform: ios
+  registry: docs
+  name: SpyneAutomobile (iOS SDK)
+  url: https://docs.spyne.ai/docs/v2-ios-sdk
+  install: See iOS integration guide (https://docs.spyne.ai/docs/steps-to-integrate)
+  official: true

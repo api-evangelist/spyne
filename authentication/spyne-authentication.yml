@@ -1,0 +1,32 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.spyne.ai/docs/authentication
+docs: https://docs.spyne.ai/docs/authentication
+summary:
+  types: [http, apiKey]
+  api_key_in: [header, body]
+  oauth2_flows: []
+  notes: >-
+    All Spyne Unified API calls use Bearer Token authentication via the
+    Authorization header. API keys are generated in the Spyne Console under
+    Developer Hub > API Keys ("Generate Key"); the key is shown only once.
+    Some legacy image endpoints additionally accept the credential as an
+    auth_key request field / Auth-key.
+schemes:
+- name: BearerToken
+  type: http
+  scheme: bearer
+  in: header
+  parameter: Authorization
+  source: https://docs.spyne.ai/docs/authentication
+  description: >-
+    Bearer token issued from the Spyne Console (Developer Hub > API Keys).
+    Sent as "Authorization: Bearer <token>".
+- name: AuthKey
+  type: apiKey
+  in: body
+  parameter: auth_key
+  source: https://docs.spyne.ai/reference/autotransformation
+  description: >-
+    Legacy image endpoints (e.g. replace-bg) accept the API key as an auth_key
+    body field; a 401 "Invalid Auth-key" is returned when it is missing/invalid.

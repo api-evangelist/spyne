@@ -1,0 +1,27 @@
+generated: '2026-07-21'
+method: derived
+source: >-
+  Derived from the documented Spyne Unified API auth, error, and webhook
+  behavior; no formal standards-compliance claims were found in public docs.
+standards:
+- id: oauth2
+  conforms: false
+  evidence: Auth is a static Bearer token / auth_key, not an OAuth2 flow.
+- id: openid-connect
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Errors are custom JSON, not application/problem+json.
+- id: bearer-token-auth
+  conforms: true
+  evidence: All Unified API calls use Authorization Bearer tokens.
+- id: webhooks
+  conforms: true
+  evidence: Signed (JWT) HTTP webhook callbacks on SKU completion.
+- id: async-job-processing
+  conforms: true
+  evidence: Submit-then-retrieve/webhook processing model per SKU.
+notes: >-
+  A trust portal exists at https://trust.spyne.ai/ but its certifications are
+  rendered client-side and could not be verified in this pass; no SOC 2 / ISO
+  27001 / GDPR / HIPAA / PCI claim is asserted here (no Compliance pointer).

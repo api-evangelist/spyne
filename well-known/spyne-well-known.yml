@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: probed
+source: live probes of Spyne hosts
+hosts:
+- host: https://www.spyne.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /security.txt
+    status: 404
+- host: https://docs.spyne.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://api.spyne.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 503
+notes: >-
+  No /.well-known discovery documents (security.txt, openid-configuration,
+  oauth-authorization-server, api-catalog, ai-plugin.json) were served on the
+  probed hosts. Recorded absence - no WellKnown/SecurityTxt pointer wired.

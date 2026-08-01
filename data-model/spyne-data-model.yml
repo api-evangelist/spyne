@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: derived
+source: >-
+  Derived from documented request/response and webhook payload fields on the
+  Spyne Unified API reference (merchandise process + webhook v2.0).
+entities:
+- name: Vehicle
+  description: A vehicle to be merchandised, identified by VIN / stock / registration.
+  id_fields: [vin, stockNumber, registrationNumber, dealerVinId]
+  relationships:
+  - has_many: Image
+    via: mediaInput.imageData
+  - has_many: Video
+    via: mediaInput.videoData
+  - belongs_to: Dealer
+    via: dealerId
+- name: Project
+  description: A processing project grouping a SKU's media outputs.
+  id_fields: [project_id]
+  relationships:
+  - has_many: SKU
+    via: sku_id
+- name: SKU
+  description: A stock-keeping unit representing one processed vehicle set.
+  id_fields: [sku_id, sku_name]
+  status_field: sku_status
+  relationships:
+  - has_many: Image
+    via: image_data
+- name: Image
+  description: A single input/output image with QC and category metadata.
+  id_fields: [image_id, image_name]
+  fields: [image_category, frame_no, input_image, output_image, lowres_output, background_id, status, image_meta_data]
+  categories: [Exterior, Interior, Miscellaneous]
+- name: Video
+  description: An input walkaround video or generated feature/360 video.
+  relationships:
+  - belongs_to: SKU
+    via: sku_id
+- name: Dealer
+  description: A dealership / team owning vehicles and inventory.
+  id_fields: [dealerId]

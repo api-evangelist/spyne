@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.spyne.ai/reference/unified-api
+format: custom
+envelope: >-
+  Spyne returns a JSON body with a status/message; authentication failures
+  surface as "Invalid Auth-key". Errors are not RFC 9457 problem+json.
+problems:
+- status: 400
+  title: Bad Request
+  description: Malformed request or invalid/missing required parameters.
+  source_operation: POST https://api.spyne.ai/api/pv1/image/replace-bg
+- status: 401
+  title: Invalid Auth-key
+  description: Missing or invalid API key / Bearer token.
+  source_operation: POST https://api.spyne.ai/auto/classify/v1/image
+- status: 401
+  title: Unauthorized
+  description: Bearer token missing, expired, or not authorized for the resource.
+  source_operation: POST https://api.spyne.ai/api/pv1/merchandise/process/
+notes: >-
+  Catalog derived from documented response codes on the Transform Images,
+  Classify Images, and Merchandise Process reference pages. Additional 4xx/5xx
+  types are likely but were not enumerated in the public reference at capture
+  time - not fabricated here.

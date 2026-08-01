@@ -1,0 +1,40 @@
+generated: '2026-07-21'
+method: derived
+status: candidate
+source: https://docs.spyne.ai/reference/unified-api
+notes: >-
+  No official hosted/remote Spyne MCP server was found during this pass. The
+  tools below are a CANDIDATE surface derived from the documented Unified API
+  operations - a starting point for an MCP wrapper, not a published server.
+server:
+  name: spyne
+  transport: http
+  url: null
+tools:
+- name: transform_vehicle
+  description: Submit vehicle images/video for AI studio transformation (images, 360 spin, feature video).
+  source_operation: POST https://api.spyne.ai/api/pv1/merchandise/process/
+- name: classify_images
+  description: Classify and QC car images (car presence, type, angle, crop, exposure, reflection, plate, etc.).
+  source_operation: POST https://api.spyne.ai/auto/classify/v1/image
+- name: replace_background
+  description: Replace/standardize the background of vehicle images (legacy image endpoint).
+  source_operation: POST https://api.spyne.ai/api/pv1/image/replace-bg
+- name: get_ready_images
+  description: Retrieve processed images that are ready for a SKU.
+  source_operation: GET https://api.spyne.ai (getreadyimages)
+- name: retrieve_media
+  description: Retrieve transformed media for a vehicle/SKU.
+  source_operation: GET https://api.spyne.ai (get-media)
+- name: validate_360_video
+  description: Validate a 360 walkaround video (cropping, angle, car presence).
+  source_operation: POST https://api.spyne.ai/360/v1/validate-video
+- name: create_360_spin
+  description: Generate a studio 3D 360-degree spin from a walkaround video.
+  source_operation: POST https://api.spyne.ai/360/v1/3d
+- name: get_360_response
+  description: Fetch 360-spin output by SKU name or SKU id.
+  source_operation: GET https://api.spyne.ai (get_response)
+- name: generate_feature_video
+  description: Generate a feature/marketing video for a vehicle.
+  source_operation: POST https://api.spyne.ai (video-generation)

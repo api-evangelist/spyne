@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.spyne.ai/reference/unified-api
+versioning:
+  scheme: uri-path
+  observed:
+  - pv1  (merchandise/process, image/replace-bg)
+  - v1   (auto/classify, 360 validate-video, 360 3d)
+  - v2   (SpyneAutomobile mobile SDK)
+  docs: https://docs.spyne.ai/reference/unified-api
+deprecation:
+  policy_url: null
+  sunset_header: false
+  deprecated_features:
+  - feature: webhook payload v1.0
+    detail: Legacy webhook payload format; v2.0 is current and recommended.
+    source: https://docs.spyne.ai/reference/webhook
+  - feature: background_type "legacy"
+    detail: Deprecated parameter on the Transform Images (replace-bg) endpoint.
+    source: https://docs.spyne.ai/reference/autotransformation
+status_page: null
+sla:
+  url: null
+notes: >-
+  No formal deprecation policy, Sunset/Deprecation header support, SLA page, or
+  live status page was found (spyne.statuspage.io redirects to statuspage.io and
+  is not a live Spyne status page). Deprecated features noted are those the docs
+  explicitly mark legacy.

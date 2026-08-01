@@ -1,0 +1,48 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.spyne.ai/docs/overview-3
+docs: https://docs.spyne.ai/docs/explaining-api-and-webhook-response
+authentication:
+  style: bearer-token
+  header: Authorization
+  detail: >-
+    Bearer token from the Spyne Console (Developer Hub > API Keys); legacy
+    image endpoints also accept an auth_key body field.
+  ref: authentication/spyne-authentication.yml
+async_processing:
+  model: submit-then-retrieve
+  detail: >-
+    Media jobs are submitted per SKU / VIN / stock number and processed
+    asynchronously. Results are obtained either by polling the retrieve/response
+    endpoints or by receiving a signed webhook callback when the SKU is "done".
+  submit_operations:
+  - POST https://api.spyne.ai/api/pv1/merchandise/process/
+  - POST https://api.spyne.ai/auto/classify/v1/image
+  - POST https://api.spyne.ai/api/pv1/image/replace-bg
+  retrieve: Retrieve Media / GET Images / Response 360-Spin endpoints
+identifiers:
+  primary_keys: [dealerVinId, project_id, sku_id, sku_name]
+  vehicle_keys: [vin, stockNumber, registrationNumber, dealerId]
+  detail: >-
+    Jobs are keyed to a vehicle (VIN / stock number / registration number) and
+    return a dealerVinId; results are grouped by project_id and sku_id.
+webhooks:
+  supported: true
+  verification: JWT signature field in payload
+  ref: asyncapi/spyne-webhooks.yml
+idempotency:
+  supported: unknown
+  detail: >-
+    No idempotency-key header or parameter is documented in the public API
+    reference; not asserting idempotency support.
+pagination:
+  supported: unknown
+  detail: No cursor/offset pagination contract documented in the public reference.
+versioning:
+  scheme: uri-path
+  detail: >-
+    Version segments appear in paths (pv1 for merchandise/image, v1 for
+    classify/360, SDK v2). See lifecycle/spyne-lifecycle.yml.
+error_envelope:
+  format: custom-json
+  ref: errors/spyne-problem-types.yml

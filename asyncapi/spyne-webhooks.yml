@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.spyne.ai/reference/webhook
+type: Webhooks
+summary: >-
+  Spyne pushes an HTTP callback (webhook) when a SKU finishes processing. The
+  subscription/callback URL is registered with your Spyne point of contact.
+  Payloads are delivered per SKU with image data in sequence and are verified
+  via a JWT signature field. A deprecated v1.0 payload format exists; v2.0 is
+  current.
+delivery:
+  transport: https-webhook
+  direction: provider-to-consumer
+  configuration: >-
+    Provide a subscription URL to your Spyne point of contact; Spyne pushes
+    notifications to that endpoint.
+  verification: signature (JWT token) included in the payload
+events:
+- name: sku.done
+  status_value: done
+  description: A SKU has completed processing; output media is ready.
+  payload_version: '2.0'
+  payload_fields:
+  - project_id
+  - sku_id
+  - sku_status
+  - signature
+  - image_data[]:
+    - image_id
+    - image_name
+    - image_category
+    - frame_no
+    - input_image
+    - output_image
+    - lowres_output
+    - background_id
+    - status
+    - image_meta_data
+  image_categories: [Exterior, Interior, Miscellaneous]
+related_reference:
+- https://docs.spyne.ai/reference/webhook
+- https://docs.spyne.ai/reference/webhook-push-service-copy
+- https://docs.spyne.ai/docs/explaining-api-and-webhook-response
