@@ -40,6 +40,17 @@ x-enrichment:
   pass: local-v1
 tags:
 - Company
+- Artificial Intelligence
+- Automotive
+- Image
+- Video
+- Computer-Vision
+- Machine-Learning
+- Dealerships
+- Media Processing
+- Webhook
+tags_raw:
+- Company
 - Ai
 - Automotive
 - Images
@@ -60,6 +71,12 @@ apis:
   humanURL: https://docs.spyne.ai/reference/unified-api
   baseURL: https://api.spyne.ai
   tags:
+  - Automotive
+  - Image
+  - Video
+  - Computer-Vision
+  - Webhook
+  tags_raw:
   - Automotive
   - Images
   - Video
