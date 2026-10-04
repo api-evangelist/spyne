@@ -56,8 +56,8 @@ tags:
 - Automotive
 - Image
 - Video
-- Computer-Vision
-- Machine-Learning
+- Computer Vision
+- Machine Learning
 - Dealership
 - Media Processing
 - Webhook
@@ -72,6 +72,8 @@ tags_raw:
 - Dealerships
 - Media Processing
 - Webhooks
+- Computer-Vision
+- Machine-Learning
 apis:
 - name: Spyne Unified API
   description: >-
@@ -86,7 +88,7 @@ apis:
   - Automotive
   - Image
   - Video
-  - Computer-Vision
+  - Computer Vision
   - Webhook
   tags_raw:
   - Automotive
@@ -94,6 +96,7 @@ apis:
   - Video
   - Computer Vision
   - Webhooks
+  - Computer-Vision
   properties:
   - type: Documentation
     url: https://docs.spyne.ai/docs/overview-3
