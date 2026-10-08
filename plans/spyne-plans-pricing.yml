@@ -1,0 +1,29 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://www.spyne.ai/pricing
+sources:
+- https://www.spyne.ai/pricing
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: negotiated
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-07'
+published: false
+note: No numeric prices; page states pricing is tailored based on monthly inventory volume, number of
+  rooftops, and selected feature set.
+plan_count: 2
+plans:
+- name: LITE
+  price_text: Talk To Sales
+  period: none
+  included_quota: Premium Vehicle Listings On Day Zero
+- name: PRO
+  price_text: Talk To Sales
+  period: none
+  included_quota: For Dealerships Seeking Maximum Conversions
